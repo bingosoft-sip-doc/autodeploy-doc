@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>6.2. agent上报变量 · GitBook</title>
+        <title>3.3.制作一主多从架构的web应用 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../question.html" />
+    <link rel="next" href="../stone.html" />
     
     
-    <link rel="prev" href="function.html" />
+    <link rel="prev" href="double-example.html" />
     
 
     </head>
@@ -367,9 +367,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../example/">
+        <li class="chapter " data-level="1.5" data-path="./">
             
-                <a href="../example/">
+                <a href="./">
             
                     
                     3.使用范例
@@ -381,9 +381,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../example/standone-example.html">
+        <li class="chapter " data-level="1.5.1" data-path="standone-example.html">
             
-                <a href="../example/standone-example.html">
+                <a href="standone-example.html">
             
                     
                     3.1.制作单机架构的web应用
@@ -394,9 +394,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../example/double-example.html">
+        <li class="chapter " data-level="1.5.2" data-path="double-example.html">
             
-                <a href="../example/double-example.html">
+                <a href="double-example.html">
             
                     
                     3.2.制作双机架构的web应用
@@ -407,9 +407,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../example/cluster-example.html">
+        <li class="chapter active" data-level="1.5.3" data-path="cluster-example.html">
             
-                <a href="../example/cluster-example.html">
+                <a href="cluster-example.html">
             
                     
                     3.3.制作一主多从架构的web应用
@@ -625,9 +625,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="./">
+        <li class="chapter " data-level="1.7" data-path="../advance/">
             
-                <a href="./">
+                <a href="../advance/">
             
                     
                     6.高级功能
@@ -639,9 +639,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="function.html">
+        <li class="chapter " data-level="1.7.1" data-path="../advance/function.html">
             
-                <a href="function.html">
+                <a href="../advance/function.html">
             
                     
                     6.1. 函数
@@ -652,9 +652,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.2" data-path="agetReport.html">
+        <li class="chapter " data-level="1.7.2" data-path="../advance/agetReport.html">
             
-                <a href="agetReport.html">
+                <a href="../advance/agetReport.html">
             
                     
                     6.2. agent上报变量
@@ -713,7 +713,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >6.2. agent上报变量</a>
+        <a href=".." >3.3.制作一主多从架构的web应用</a>
     </h1>
 </div>
 
@@ -728,35 +728,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x53D8;&#x91CF;&#x4E0A;&#x62A5;">&#x53D8;&#x91CF;&#x4E0A;&#x62A5;</h2>
-<p>&#x53D8;&#x91CF;&#x4E0A;&#x62A5;&#x673A;&#x5236;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5728;&#x811A;&#x672C;&#x6267;&#x884C;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x5C06;&#x91C7;&#x96C6;&#x5230;&#x7684;&#x53D8;&#x91CF;&#x4FE1;&#x606F;&#x4E0A;&#x62A5;&#x5230;&#x6574;&#x4E2A;&#x4EFB;&#x52A1;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x53D8;&#x91CF;&#x6C60;&#x4E2D;&#xFF0C;&#x4F9B;&#x540C;&#x65B9;&#x6848;&#x4E2D;&#x5176;&#x4ED6;&#x811A;&#x672C;&#x6216;&#x540E;&#x7EED;&#x8FD0;&#x7EF4;&#x65B9;&#x6848;&#x4E2D;&#x7684;&#x811A;&#x672C;&#x4F7F;&#x7528;&#x3002;</p>
-<h3 id="&#x4F7F;&#x7528;&#x573A;&#x666F;">&#x4F7F;&#x7528;&#x573A;&#x666F;</h3>
-<p>&#x53D8;&#x91CF;&#x4E0A;&#x62A5;&#x673A;&#x5236;&#x7684;&#x5F15;&#x5165;&#x4E3B;&#x8981;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x83B7;&#x53D6;&#x5728;&#x8FD0;&#x884C;&#x4E2D;&#x52A8;&#x6001;&#x4EA7;&#x751F;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x6709;&#x4F46;&#x4E0D;&#x9650;&#x4E8E;&#x5982;&#x4E0B;&#x573A;&#x666F;</p>
-<ol>
-<li>&#x5728;&#x5355;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#x7684;&#x591A;&#x4E2A;&#x811A;&#x672C;&#x4E4B;&#x95F4;</li>
-<li>&#x591A;&#x7EA7;&#x4E4B;&#x95F4;&#x7684;&#x591A;&#x4E2A;&#x811A;&#x672C;&#x4E4B;&#x95F4;</li>
-<li>&#x8FD0;&#x7EF4;&#x65B9;&#x6848;&#x4F7F;&#x7528;&#x539F;&#x6709;&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4FE1;&#x606F;</li>
-</ol>
-<h3 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;">&#x5982;&#x4F55;&#x4F7F;&#x7528;</h3>
-<p>&#x5728;&#x811A;&#x672C;&#x4E2D;&#xFF0C;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x5373;&#x53EF;&#x8FDB;&#x884C;&#x53D8;&#x91CF;&#x4E0A;&#x62A5;</p>
-<pre><code>...
-echo @Param[key1=value1]
-...
-echo @Param[key2=value2]
-</code></pre><p>&#x5728;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x81EA;&#x52A8;&#x5316;&#x90E8;&#x7F72;&#x4F53;&#x7CFB;&#x7684;&#x53D8;&#x91CF;&#x673A;&#x5236;&#x5373;&#x53EF;&#xFF0C;&#x5982;&#x4E0A;&#x8FF0;&#x7684;&#x53D8;&#x91CF;&#x5176;&#x5E94;&#x7528;&#x4E3A;</p>
-<p> <code>echo ${key1}  // value1``echo ${key2}  // value2</code></p>
-<h2 id="&#x6267;&#x884C;&#x8FDB;&#x5EA6;&#x4E0A;&#x62A5;">&#x6267;&#x884C;&#x8FDB;&#x5EA6;&#x4E0A;&#x62A5;</h2>
-<p>&#x6267;&#x884C;&#x8FDB;&#x5EA6;&#x4E0A;&#x62A5;&#x7528;&#x4E8E;&#x5BF9;&#x6574;&#x4E2A;&#x90E8;&#x7F72;&#x4EFB;&#x52A1;&#x7684;&#x8FDB;&#x5EA6;&#x8FDB;&#x884C;&#x7CBE;&#x786E;&#x63A7;&#x5236;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x8F83;&#x8017;&#x65F6;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x5176;&#x6267;&#x884C;&#x9700;&#x8981;&#x6D88;&#x8017;&#x8F83;&#x957F;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x6B64;&#x65F6;&#x5982;&#x679C;&#x65B9;&#x6848;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x5728;&#x811A;&#x672C;&#x6267;&#x884C;&#x5230;&#x67D0;&#x4E2A;&#x73AF;&#x8282;&#x65F6;&#x544A;&#x8BC9;SIP&#x5F53;&#x524D;&#x811A;&#x672C;&#x7684;&#x8FDB;&#x5EA6;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x914D;&#x5408;SIP&#x4E2D;&#x90E8;&#x7F72;&#x4EFB;&#x52A1;&#x7684;&#x7BA1;&#x7406;&#x754C;&#x9762;&#x663E;&#x793A;&#xFF0C;&#x90A3;&#x4E48;&#x4F53;&#x9A8C;&#x4F1A;&#x662F;&#x76F8;&#x5F53;&#x597D;&#x7684;&#x3002;</p>
-<h3 id="&#x4F7F;&#x7528;&#x573A;&#x666F;">&#x4F7F;&#x7528;&#x573A;&#x666F;</h3>
-<p>&#x8017;&#x65F6;&#x4EFB;&#x52A1;&#x7684;&#x7CBE;&#x5EA6;&#x7CBE;&#x786E;&#x4E0A;&#x62A5;</p>
-<h3 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;">&#x5982;&#x4F55;&#x4F7F;&#x7528;</h3>
-<p>&#x5728;&#x811A;&#x672C;&#x7684;&#x67D0;&#x4E00;&#x884C;&#xFF0C;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x5373;&#x53EF;</p>
-<pre><code>...
-echo @Progress[percent=10]
-...
-echo @Progress[percent=46]
-</code></pre><h1 id=""> </h1>
-
+                                
                                 
                                 </section>
                             
@@ -783,12 +755,12 @@ echo @Progress[percent=46]
 
             
                 
-                <a href="function.html" class="navigation navigation-prev " aria-label="Previous page: 6.1. 函数">
+                <a href="double-example.html" class="navigation navigation-prev " aria-label="Previous page: 3.2.制作双机架构的web应用">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../question.html" class="navigation navigation-next " aria-label="Next page: 7.常见问题">
+                <a href="../stone.html" class="navigation navigation-next " aria-label="Next page: 4.执行器说明">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -799,7 +771,7 @@ echo @Progress[percent=46]
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.2. agent上报变量","level":"1.7.2","depth":2,"next":{"title":"7.常见问题","level":"1.8","depth":1,"path":"question.md","ref":"question.md","articles":[]},"previous":{"title":"6.1. 函数","level":"1.7.1","depth":2,"path":"advance/function.md","ref":"advance/function.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"advance/agetReport.md","mtime":"2018-09-19T06:09:57.220Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-08T11:57:18.473Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.3.制作一主多从架构的web应用","level":"1.5.3","depth":2,"next":{"title":"4.执行器说明","level":"1.6","depth":1,"path":"stone.md","ref":"stone.md","articles":[{"title":"4.1.资源服务","level":"1.6.1","depth":2,"path":"ec2/README.md","ref":"ec2/README.md","articles":[{"title":"4.1.1.实例","level":"1.6.1.1","depth":3,"path":"ec2/instance.md","ref":"ec2/instance.md","articles":[]},{"title":"4.1.2.存储","level":"1.6.1.2","depth":3,"path":"ec2/volume.md","ref":"ec2/volume.md","articles":[]},{"title":"4.1.3.负载均衡","level":"1.6.1.3","depth":3,"path":"ec2/loadbalancer.md","ref":"ec2/loadbalancer.md","articles":[]},{"title":"4.1.4.VIP","level":"1.6.1.4","depth":3,"path":"ec2/vip.md","ref":"ec2/vip.md","articles":[]},{"title":"4.1.5.安全组","level":"1.6.1.5","depth":3,"path":"ec2/group.md","ref":"ec2/group.md","articles":[]}]},{"title":"4.2.指令服务","level":"1.6.2","depth":2,"path":"deploy/README.md","ref":"deploy/README.md","articles":[{"title":"4.2.1. 自定义指令","level":"1.6.2.1","depth":3,"path":"deploy/command.md","ref":"deploy/command.md","articles":[]},{"title":"4.2.2. 通用指令","level":"1.6.2.2","depth":3,"path":"deploy/commonCommand.md","ref":"deploy/commonCommand.md","articles":[]},{"title":"4.2.3. 组件","level":"1.6.2.3","depth":3,"path":"deploy/componet.md","ref":"deploy/componet.md","articles":[]},{"title":"4.2.4. 文件","level":"1.6.2.4","depth":3,"path":"deploy/file.md","ref":"deploy/file.md","articles":[]},{"title":"4.2.5. 防火墙端口","level":"1.6.2.5","depth":3,"path":"deploy/firewall.md","ref":"deploy/firewall.md","articles":[]},{"title":"4.2.4. Host设置","level":"1.6.2.6","depth":3,"path":"deploy/host.md","ref":"deploy/host.md","articles":[]}]}]},"previous":{"title":"3.2.制作双机架构的web应用","level":"1.5.2","depth":2,"path":"example/double-example.md","ref":"example/double-example.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"example/cluster-example.md","mtime":"2018-11-09T01:28:53.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-08T11:57:18.473Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
