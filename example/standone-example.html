@@ -747,16 +747,36 @@
 </blockquote>
 <h4 id="&#x8BBE;&#x8BA1;&#x65B9;&#x6848;">&#x8BBE;&#x8BA1;&#x65B9;&#x6848;</h4>
 <p>&#x6253;&#x5F00;&#x65B9;&#x6848;&#xFF0C;&#x8FDB;&#x5165;&#x8BBE;&#x8BA1;&#x5668;&#x754C;&#x9762;&#xFF0C;&#x6309;&#x7167;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x4F9D;&#x6B21;&#x4ECE;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x4E2D;&#x62D6;&#x62FD;&#x5F00;&#x59CB;&#x4E8B;&#x4EF6;&#xFF0C;&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;&#xFF1B;&#x4ECE;&#x8D44;&#x6E90;&#x670D;&#x52A1;&#x4E2D;&#x62D6;&#x62FD;&#x5B89;&#x5168;&#x7EC4;&#xFF0C;&#x5B9E;&#x4F8B;&#x548C;&#x5B58;&#x50A8;&#x5377;&#xFF0C;&#x4ECE;&#x6307;&#x4EE4;&#x670D;&#x52A1;&#x4E2D;&#x62D6;&#x62FD;&#x9632;&#x706B;&#x5899;&#x7AEF;&#x53E3;&#xFF0C;&#x6587;&#x4EF6;&#xFF0C;&#x7EC4;&#x4EF6;&#x548C;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;&#x3002;</p>
+<p><img src="../image/example-signle-modle.png" alt="img"></p>
 <ol>
-<li>&#x7F16;&#x8F91;&#x5B89;&#x5168;&#x7EC4;</li>
-<li>&#x7F16;&#x8F91;&#x5B9E;&#x4F8B;</li>
-<li>&#x7F16;&#x8F91;&#x5B58;&#x50A8;&#x5377;</li>
-<li>&#x7F16;&#x8F91;&#x9632;&#x706B;&#x5899;&#x7AEF;&#x53E3;</li>
-<li>&#x7F16;&#x8F91;&#x6587;&#x4EF6;</li>
-<li>&#x7F16;&#x8F91;&#x7EC4;&#x4EF6;</li>
-<li>&#x7F16;&#x8F91;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;</li>
-</ol>
-<pre><code>echo install jdk
+<li><p>&#x7F16;&#x8F91;&#x5B89;&#x5168;&#x7EC4;</p>
+<p>&#x5F00;&#x653E;&#x7AEF;&#x53E3;&#xFF1A;<code>tcp:8080</code></p>
+</li>
+<li><p>&#x7F16;&#x8F91;&#x5B9E;&#x4F8B;</p>
+<p>&#x5B9E;&#x4F8B;&#x540D;&#x79F0;&#x4E3A;webserver,&#x8282;&#x70B9;&#x7684;&#x7F16;&#x53F7;&#x4E3A;<code>createInstance</code>,&#x540D;&#x79F0;&#x4E3A;<code>&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;</code></p>
+<p><img src="../image/example-signle-instance.png" alt="img"></p>
+<p>&#x200B;</p>
+</li>
+<li><p>&#x7F16;&#x8F91;&#x5B58;&#x50A8;&#x5377;</p>
+<p>&#x5B9E;&#x4F8B;ID&#x4E3A;<code>${outputs.createInstance.instanceId}</code></p>
+</li>
+<li><p>&#x7F16;&#x8F91;&#x5B58;&#x50A8;&#x5377;&#x683C;&#x5F0F;&#x5316;
+&#x5B9E;&#x4F8B;ID&#x4E3A;<code>${outputs.createInstance.instanceId}</code>
+<img src="../image/example-volume-attach.png" alt="img"></p>
+</li>
+<li><p>&#x7F16;&#x8F91;&#x9632;&#x706B;&#x5899;&#x7AEF;&#x53E3;</p>
+<p>&#x5B9E;&#x4F8B;ID&#x4E3A;<code>${outputs.createInstance.instanceId}</code>,&#x9632;&#x706B;&#x5899;&#x7AEF;&#x53E3;&#x4E3A;<code>tcp:8080</code></p>
+</li>
+<li><p>&#x7F16;&#x8F91;&#x6587;&#x4EF6;</p>
+<p>&#x5B9E;&#x4F8B;ID&#x4E3A;<code>${outputs.createInstance.instanceId}</code>&#xFF0C;&#x6587;&#x4EF6;ID&#x9009;&#x62E9;&#x5DF2;&#x4E0A;&#x4F20;&#x5E76;&#x6CE8;&#x518C;&#x7684;&#x4E09;&#x4E2A;&#x6587;&#x4EF6;</p>
+<p><img src="../image/example-getsignlefile.png" alt="img"></p>
+</li>
+<li><p>&#x7F16;&#x8F91;&#x7EC4;&#x4EF6;</p>
+<p>&#x5B9E;&#x4F8B;ID&#x4E3A;<code>${outputs.createInstance.instanceId}</code>,&#x7EF4;&#x62A4;&#x7EC4;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x65E5;&#x5FD7;&#x76EE;&#x5F55;&#xFF0C;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#x7B49;</p>
+<p><img src="../image/example-signle-componet.png" alt="img"></p>
+<p>&#x5B89;&#x88C5;&#x811A;&#x672C;&#xFF1A;</p>
+<pre><code>#! /bin/sh
+echo install jdk
 cd /tmp
 unzip -q jre.zip -d /usr/local/java/
 echo &quot;JAVA_HOME=/usr/local/java&quot; &gt;&gt; /etc/profile
@@ -771,7 +791,20 @@ tar zxf tomcat-7.0.32.tar.gz -C /apps/svr/tomcat7/
 ln -s /apps/svr/tomcat7/bin/catalina.sh /etc/init.d/tomcat
 sed -i &quot;102a JRE_HOME=/usr/local/java/jre&quot; /apps/svr/tomcat7/bin/catalina.sh
 echo &quot;service tomcat start&quot;&gt;&gt;/etc/rc.local
-</code></pre>
+</code></pre><p>&#x200B;</p>
+</li>
+<li><p>&#x7F16;&#x8F91;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;</p>
+<p>&#x5B9E;&#x4F8B;ID&#x4E3A;<code>${outputs.createInstance.instanceId}</code></p>
+<p><img src="../image/example-signle-web.png" alt="img"></p>
+<p>&#x6307;&#x4EE4;&#x5185;&#x5BB9;:</p>
+<pre><code>#! /bin/sh
+unzip signle-web.zip -d /apps/svr/tomcat7/webapps
+service tomcat start
+</code></pre><p>&#x200B;</p>
+</li>
+</ol>
+<p>&#x8BBE;&#x8BA1;&#x5B8C;&#x6210;&#xFF0C;&#x70B9;&#x51FB;&#x4FDD;&#x5B58;&#x5373;&#x53EF;&#x3002;</p>
+
                                 
                                 </section>
                             
@@ -814,7 +847,7 @@ echo &quot;service tomcat start&quot;&gt;&gt;/etc/rc.local
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.1.制作单机架构的web应用","level":"1.5.1","depth":2,"next":{"title":"3.2.制作双机架构的web应用","level":"1.5.2","depth":2,"path":"example/double-example.md","ref":"example/double-example.md","articles":[]},"previous":{"title":"3.使用范例","level":"1.5","depth":1,"path":"example/README.md","ref":"example/README.md","articles":[{"title":"3.1.制作单机架构的web应用","level":"1.5.1","depth":2,"path":"example/standone-example.md","ref":"example/standone-example.md","articles":[]},{"title":"3.2.制作双机架构的web应用","level":"1.5.2","depth":2,"path":"example/double-example.md","ref":"example/double-example.md","articles":[]},{"title":"3.3.制作一主多从架构的web应用","level":"1.5.3","depth":2,"path":"example/cluster-example.md","ref":"example/cluster-example.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"example/standone-example.md","mtime":"2018-11-09T05:59:06.807Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-08T11:57:18.473Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.1.制作单机架构的web应用","level":"1.5.1","depth":2,"next":{"title":"3.2.制作双机架构的web应用","level":"1.5.2","depth":2,"path":"example/double-example.md","ref":"example/double-example.md","articles":[]},"previous":{"title":"3.使用范例","level":"1.5","depth":1,"path":"example/README.md","ref":"example/README.md","articles":[{"title":"3.1.制作单机架构的web应用","level":"1.5.1","depth":2,"path":"example/standone-example.md","ref":"example/standone-example.md","articles":[]},{"title":"3.2.制作双机架构的web应用","level":"1.5.2","depth":2,"path":"example/double-example.md","ref":"example/double-example.md","articles":[]},{"title":"3.3.制作一主多从架构的web应用","level":"1.5.3","depth":2,"path":"example/cluster-example.md","ref":"example/cluster-example.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"example/standone-example.md","mtime":"2018-11-11T14:21:25.612Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-11T13:27:47.220Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
