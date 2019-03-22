@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>3.4.3.等待控制 · GitBook</title>
+        <title>3.8.环境变量 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="designe-param.html" />
+    <link rel="next" href="operation.html" />
     
     
-    <link rel="prev" href="designe-parallel.html" />
+    <link rel="prev" href="publish.html" />
     
 
     </head>
@@ -279,7 +279,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.4.3" data-path="designe-waiting.html">
+        <li class="chapter " data-level="1.4.4.3" data-path="designe-waiting.html">
             
                 <a href="designe-waiting.html">
             
@@ -362,7 +362,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="envParam.html">
+        <li class="chapter active" data-level="1.4.8" data-path="envParam.html">
             
                 <a href="envParam.html">
             
@@ -797,7 +797,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >3.4.3.等待控制</a>
+        <a href=".." >3.8.环境变量</a>
     </h1>
 </div>
 
@@ -812,12 +812,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="&#x5229;&#x7528;&#x5E76;&#x884C;&#x7F51;&#x5173;&#x8FDB;&#x884C;&#x7B49;&#x5F85;&#x63A7;&#x5236;">&#x5229;&#x7528;&#x5E76;&#x884C;&#x7F51;&#x5173;&#x8FDB;&#x884C;&#x7B49;&#x5F85;&#x63A7;&#x5236;</h4>
-<p>&#x5E76;&#x884C;&#x7F51;&#x5173;&#x8FD8;&#x53EF;&#x4EE5;&#x6709;&#x7B49;&#x5F85;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x4F8B;&#x5982;&#x67D0;&#x4E9B;&#x9700;&#x8981;&#x7B49;&#x5F85;&#x5176;&#x4ED6;&#x673A;&#x5668;&#x7684;&#x811A;&#x672C;&#x90FD;&#x8FD0;&#x884C;&#x6210;&#x529F;&#x4E4B;&#x540E;&#x624D;&#x8FD0;&#x884C;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5E76;&#x884C;&#x7F51;&#x5173;&#x3002;
-<img src="../image/haproxy.png" alt="img">
-&#x4F8B;&#x5982;&#x8FD9;&#x4E2A;&#x521B;&#x5EFA;Haproxy&#x8D1F;&#x8F7D;Tomcat&#x96C6;&#x7FA4;&#x7684;&#x6D41;&#x7A0B;&#x6A21;&#x578B;&#xFF0C;&#x5176;&#x4E2D;<strong>&#x6CE8;&#x518C;&#x5230;Hapaoxy</strong>&#x9700;&#x8981;&#x7B49;&#x5F85;tomcat&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x5E76;&#x90E8;&#x7F72;&#x5B8C;&#x5E94;&#x7528;&#xFF0C;&#x8FD9;&#x65F6;&#x5E76;&#x884C;&#x7F51;&#x5173;&#x5C31;&#x8D77;&#x5230;&#x4E86;&#x7B49;&#x5F85;&#x7684;&#x4F5C;&#x7528;&#x3002;
-&#x6D41;&#x7A0B;&#x5C06;&#x4F1A;&#x7B49;&#x5F85;&#x4E24;&#x4E2A;&#x5206;&#x652F;&#x90FD;&#x8FD0;&#x884C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x624D;&#x4F1A;&#x8FD0;&#x884C;<strong>&#x6CE8;&#x518C;&#x5230;Hapaoxy</strong>&#x3002;</p>
-
+                                <p>&#x81EA;&#x52A8;&#x5316;&#x90E8;&#x7F72;&#x521B;&#x5EFA;&#x7684;&#x73AF;&#x5883;&#x5B9E;&#x4F8B;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x5176;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;&#x901A;&#x8FC7;&#x53C2;&#x6570;&#x6A21;&#x677F;&#x4E2D;&#x914D;&#x7F6E;&#x8F93;&#x51FA;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;&#x6D41;&#x7A0B;&#x53C2;&#x6570;&#x548C;&#x6D41;&#x7A0B;&#x8F93;&#x51FA;&#x4E2D;&#x83B7;&#x53D6;&#x60F3;&#x8981;&#x5199;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x3002;</p>
+<p><img src="../image/output-json.png" alt="img"></p>
+<p><img src="../image/envparam.png" alt="img"></p>
+<h3 id="&#x4ECE;&#x53C2;&#x6570;&#x4E2D;&#x53D6;&#x503C;">&#x4ECE;&#x53C2;&#x6570;&#x4E2D;&#x53D6;&#x503C;</h3>
+<pre><code>${parameters.XXX}
+</code></pre><h3 id="&#x4ECE;&#x8F93;&#x51FA;&#x4E2D;&#x53D6;&#x503C;">&#x4ECE;&#x8F93;&#x51FA;&#x4E2D;&#x53D6;&#x503C;</h3>
+<pre><code>${outputs.namespace.XXX}
+</code></pre>
                                 
                                 </section>
                             
@@ -844,12 +846,12 @@
 
             
                 
-                <a href="designe-parallel.html" class="navigation navigation-prev " aria-label="Previous page: 3.4.2.并行控制">
+                <a href="publish.html" class="navigation navigation-prev " aria-label="Previous page: 3.7.发布到服务">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="designe-param.html" class="navigation navigation-next " aria-label="Next page: 3.4.4.参数引用和取值">
+                <a href="operation.html" class="navigation navigation-next " aria-label="Next page: 3.7.运维方案">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -860,7 +862,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.4.3.等待控制","level":"1.4.4.3","depth":3,"next":{"title":"3.4.4.参数引用和取值","level":"1.4.4.4","depth":3,"path":"designer/designe-param.md","ref":"designer/designe-param.md","articles":[]},"previous":{"title":"3.4.2.并行控制","level":"1.4.4.2","depth":3,"path":"designer/designe-parallel.md","ref":"designer/designe-parallel.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"designer/designe-waiting.md","mtime":"2018-11-06T06:19:29.979Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-21T12:43:28.762Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.8.环境变量","level":"1.4.8","depth":2,"next":{"title":"3.7.运维方案","level":"1.4.9","depth":2,"path":"designer/operation.md","ref":"designer/operation.md","articles":[]},"previous":{"title":"3.7.发布到服务","level":"1.4.7","depth":2,"path":"designer/publish.md","ref":"designer/publish.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"designer/envParam.md","mtime":"2019-03-21T13:09:49.924Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-21T12:43:28.762Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
