@@ -362,6 +362,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4.8" data-path="../designer/envParam.html">
+            
+                <a href="../designer/envParam.html">
+            
+                    
+                    3.8.环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../designer/operation.html">
+            
+                <a href="../designer/operation.html">
+            
+                    
+                    3.7.运维方案
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -787,8 +813,17 @@
                                 <section class="normal markdown-section">
                                 
                                 <p><code>SipRS</code>&#x5F15;&#x64CE;&#x63D0;&#x4F9B;&#x5BF9;&#x4E8E;&#x590D;&#x6742;json&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x53C2;&#x6570;&#x6C42;&#x89E3;&#x529F;&#x80FD;&#xFF0C;&#x81EA;&#x52A8;&#x5316;&#x90E8;&#x7F72;&#x670D;&#x52A1;&#x6269;&#x5C55;&#x4E86;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x89E3;&#x6790;&#x3002;</p>
-<h3 id="fngetappenv">Fn::GetAppEnv</h3>
-<p>&#x4ECE;&#x4E00;&#x4E2A;json&#x7ED3;&#x6784;&#x4F53;&#x4E2D;&#xFF0C;&#x53D6;&#x67D0;&#x4E00;&#x4E2A;&#x53C2;&#x6570;</p>
+<p>[toc]</p>
+<h3 id="envparamsenvid">EnvParams:EnvId</h3>
+<p>&#x5BF9;&#x4E8E;&#x73AF;&#x5883;Id&#xFF0C;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x4E86;&#x83B7;&#x53D6;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x65B9;&#x4FBF;&#x5728;&#x8FD0;&#x7EF4;&#x65B9;&#x6848;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x73AF;&#x5883;ID&#x67E5;&#x8BE2;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x4FE1;&#x606F;</p>
+<pre><code>{
+    &quot;Key&quot;: &quot;envId&quot;,
+    &quot;AllowedCustomization&quot;: &quot;FALSE&quot;,
+    &quot;DefaultValue&quot;: &quot;EnvParams:EnvId&quot;,
+    &quot;sort&quot;: 2
+  }
+</code></pre><h3 id="fngetappenv">Fn::GetAppEnv</h3>
+<p>&#x83B7;&#x53D6;&#x67D0;&#x4E00;&#x4E2A;&#x73AF;&#x5883;&#x7684;&#x53C2;&#x6570;&#x4FE1;&#x606F;</p>
 <pre><code>{&#x201C;envParam&#x201D; : 
     {
         &quot;Fn::GetAppEnv&quot;: [
@@ -801,6 +836,14 @@
     &quot;user&quot; : &quot;root&quot;,
     &quot;password&quot; : &quot;111111&quot;
 }}
+</code></pre><p>&#x8FD9;&#x91CC;&#x4E5F;&#x53EF;&#x4EE5;&#x5F15;&#x7528;EnvParams:EnvId&#x53C2;&#x6570;</p>
+<pre><code>{&#x201C;envParam&#x201D; : 
+    {
+        &quot;Fn::GetAppEnv&quot;: [
+            EnvParams:EnvId
+        ]
+    }
+}
 </code></pre><ul>
 <li>&#x53C2;&#x6570;1&#xFF1A;envId</li>
 </ul>
@@ -809,7 +852,140 @@
 <p>&#x73AF;&#x5883;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x5728;&#x73AF;&#x5883;&#x7684;&#x8BE6;&#x60C5;&#x9875;&#x9762;&#x770B;&#x5230;&#x3002;</p>
 </blockquote>
 <p><img src="../image/envparam.png" alt="img"></p>
-
+<p>&#x9664;&#x4E86;&#x8BBE;&#x8BA1;&#x8005;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x73AF;&#x5883;&#x53C2;&#x6570;&#x4EE5;&#x5916;&#xFF0C;&#x7CFB;&#x7EDF;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x56FA;&#x5B9A;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code>&quot;envId&quot;: &quot;bb19e468-0c08-4c52-a91b-2fe4f98b93e5&quot;,
+&quot;envName&quot;: &quot;test222&quot;,
+&quot;envStatus&quot;: &quot;ready&quot;,
+&quot;createTaskId&quot;: &quot;22f6742d-46ba-433c-b0e5-ef99b943012f&quot;,
+&quot;createProcessInstanceId&quot;: &quot;e3cc0a51-4bbe-11e9-9ff8-d00dd670a106&quot;,
+</code></pre><h3 id="fngetatt">Fn::GetAtt</h3>
+<p>&#x4ECE;&#x4E00;&#x4E2A;json&#x7ED3;&#x6784;&#x4E2D;&#xFF0C;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x53C2;&#x6570;</p>
+<pre><code>{
+          &quot;Fn::GetAtt&quot;: [
+            {
+              &quot;createProcessInstanceId&quot;:&quot;11111111111111111&quot;
+            },
+            &quot;createProcessInstanceId&quot;
+          ]
+        }
+</code></pre><ul>
+<li>&#x53C2;&#x6570;1&#xFF1A;jsonObject</li>
+<li>&#x53C2;&#x6570;2&#xFF1A;&#x53D6;&#x503C;&#x7684;key</li>
+</ul>
+<p>&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x662F;&#x7528;&#x6765;&#x4ECE;&#x73AF;&#x5883;&#x53C2;&#x6570;&#x4E2D;&#x83B7;&#x53D6;&#x5230;<code>createProcessInstanceId</code>.</p>
+<pre><code>{
+    &quot;Key&quot;: &quot;root&quot;,
+    &quot;Type&quot;: &quot;String&quot;,
+    &quot;DefaultValue&quot;: {
+      &quot;Fn::GetProcessOutputs&quot;: [
+        {
+          &quot;Fn::GetAtt&quot;: [
+            {
+              &quot;Fn::GetAppEnv&quot;: [
+                &quot;EnvParams:EnvId&quot;
+              ]
+            },
+            &quot;createProcessInstanceId&quot;
+          ]
+        },
+        &quot;test&quot;,
+        [
+          &quot;user&quot;
+        ]
+      ]
+    },
+    &quot;NoEcho&quot;: &quot;FALSE&quot;,
+    &quot;AllowedCustomization&quot;: &quot;FALSE&quot;,
+    &quot;UIGroup&quot;: &quot;test&quot;,
+    &quot;sort&quot;: 1
+  }
+</code></pre><h3 id="fngetprocessoutputs">Fn::GetProcessOutputs</h3>
+<p>  &#x83B7;&#x53D6;&#x6D41;&#x7A0B;&#x7684;&#x8F93;&#x51FA;&#x4FE1;&#x606F;</p>
+<pre><code>  {
+      &quot;Fn::GetProcessOutputs&quot;: [
+        &quot;1111111&quot;,
+        &quot;test&quot;,
+        [
+          &quot;user&quot;
+        ]
+      ]
+    }
+</code></pre><ul>
+<li>&#x53C2;&#x6570;1&#xFF1A;&#x6D41;&#x7A0B;ID</li>
+<li>&#x53C2;&#x6570;2&#xFF1A;&#x6D41;&#x7A0B;&#x4E2D;&#x7684;namespace</li>
+<li>&#x53C2;&#x6570;3&#xFF1A;namespace&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x540D;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x591A;&#x4E2A;</li>
+</ul>
+<p>&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x662F;&#x7528;&#x6765;&#x4ECE;&#x6D41;&#x7A0B;&#x8F93;&#x51FA;&#x4E2D;&#x53D6;&#x5230;namespace&#x4E3A;test&#x7684;&#x8282;&#x70B9;&#x4E0B;&#xFF0C;key&#x4E3A;user&#x7684;&#x503C;.</p>
+<pre><code>{
+    &quot;Key&quot;: &quot;root&quot;,
+    &quot;Type&quot;: &quot;String&quot;,
+    &quot;DefaultValue&quot;: {
+      &quot;Fn::GetProcessOutputs&quot;: [
+        {
+          &quot;Fn::GetAtt&quot;: [
+            {
+              &quot;Fn::GetAppEnv&quot;: [
+                &quot;EnvParams:EnvId&quot;
+              ]
+            },
+            &quot;createProcessInstanceId&quot;
+          ]
+        },
+        &quot;test&quot;,
+        [
+          &quot;user&quot;
+        ]
+      ]
+    },
+    &quot;NoEcho&quot;: &quot;FALSE&quot;,
+    &quot;AllowedCustomization&quot;: &quot;FALSE&quot;,
+    &quot;UIGroup&quot;: &quot;test&quot;,
+    &quot;sort&quot;: 1
+  }
+</code></pre><h3 id="fngetprocessparams">Fn::GetProcessParams</h3>
+<p>&#x83B7;&#x53D6;&#x6D41;&#x7A0B;&#x5B9E;&#x4F8B;&#x7684;&#x53C2;&#x6570;</p>
+<pre><code>{
+      &quot;Fn::GetProcessParams&quot;: [
+        &#x201D;111111&#x201C;,
+        &quot;database&quot;
+      ]
+    }
+</code></pre><ul>
+<li>&#x53C2;&#x6570;1&#xFF1A;&#x6D41;&#x7A0B;ID</li>
+<li>&#x53C2;&#x6570;2&#xFF1A;&#x53C2;&#x6570;&#x540D;/namespace&#x540D;&#xFF0C;&#x5982;&#x679C;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x8BA4;&#x4E3A;&#x662F;&#x53C2;&#x6570;&#x540D;</li>
+<li>&#x53C2;&#x6570;3&#xFF1A;&#x5982;&#x679C;&#x53C2;&#x6570;&#x4E3A;json&#xFF0C;&#x5219;&#x8FDB;&#x4E00;&#x6B65;&#x53D6;&#x503C;</li>
+</ul>
+<p>&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x662F;&#x7528;&#x6765;&#x4ECE;&#x6D41;&#x7A0B;&#x8F93;&#x51FA;&#x4E2D;&#x53D6;&#x5230;namespace&#x4E3A;test&#x7684;&#x8282;&#x70B9;&#x4E0B;&#xFF0C;key&#x4E3A;user&#x7684;&#x503C;.</p>
+<pre><code>&#x5982;&#x679C;&#x6D41;&#x7A0B;111&#x7684;&#x53C2;&#x6570;&#x5982;&#x4E0B;
+{
+    &quot;username&quot;:&quot;zhangshan&quot;,
+    &quot;slave&quot;:{
+        &quot;image&quot;:&quot;redhat&quot;
+    }
+}
+&#x5219;&#x53D6;&#x503C;&#x4E3A;&#xFF1A;
+{
+    &quot;Key&quot;: &quot;username&quot;,
+    &quot;Type&quot;: &quot;String&quot;,
+    &quot;DefaultValue&quot;: {
+      &quot;Fn::GetProcessParams&quot;: [
+        &quot;111&quot;,
+        &quot;username&quot;
+      ]
+    }
+  },
+  {
+    &quot;Key&quot;: &quot;image&quot;,
+    &quot;Type&quot;: &quot;String&quot;,
+    &quot;DefaultValue&quot;: {
+      &quot;Fn::GetProcessParams&quot;: [
+        &quot;111&quot;,
+        &quot;slave&quot;,
+        [&quot;image&quot;]
+      ]
+    }
+  }
+</code></pre>
                                 
                                 </section>
                             
@@ -852,7 +1028,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.1. 函数","level":"1.7.1","depth":2,"next":{"title":"6.2. agent上报变量","level":"1.7.2","depth":2,"path":"advance/agetReport.md","ref":"advance/agetReport.md","articles":[]},"previous":{"title":"6.高级功能","level":"1.7","depth":1,"path":"advance/README.md","ref":"advance/README.md","articles":[{"title":"6.1. 函数","level":"1.7.1","depth":2,"path":"advance/function.md","ref":"advance/function.md","articles":[]},{"title":"6.2. agent上报变量","level":"1.7.2","depth":2,"path":"advance/agetReport.md","ref":"advance/agetReport.md","articles":[]},{"title":"6.3. 系统变量","level":"1.7.3","depth":2,"path":"advance/systemParam.md","ref":"advance/systemParam.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"advance/function.md","mtime":"2018-09-19T03:27:33.825Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-18T06:54:53.638Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.1. 函数","level":"1.7.1","depth":2,"next":{"title":"6.2. agent上报变量","level":"1.7.2","depth":2,"path":"advance/agetReport.md","ref":"advance/agetReport.md","articles":[]},"previous":{"title":"6.高级功能","level":"1.7","depth":1,"path":"advance/README.md","ref":"advance/README.md","articles":[{"title":"6.1. 函数","level":"1.7.1","depth":2,"path":"advance/function.md","ref":"advance/function.md","articles":[]},{"title":"6.2. agent上报变量","level":"1.7.2","depth":2,"path":"advance/agetReport.md","ref":"advance/agetReport.md","articles":[]},{"title":"6.3. 系统变量","level":"1.7.3","depth":2,"path":"advance/systemParam.md","ref":"advance/systemParam.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"advance/function.md","mtime":"2019-03-21T13:01:44.846Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-28T09:09:05.556Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
